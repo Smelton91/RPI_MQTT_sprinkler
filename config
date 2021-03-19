@@ -1,0 +1,30 @@
+# This is a configuration file for setting up the sprinkler schedule.
+
+[SprinklerConfig] # don't edit this line
+####
+## Provide API key for openweathermap.org
+api_key = 5a374b1a2250ef7ed1162070e2fa58ea
+
+####
+## Lattitude and longitude where sprinkler is being run. 
+lat = 27.33
+lon = -82.46
+
+####
+## How long in minutes to run the sprinkler at a time
+runtime_min = 1.0
+####
+## Rain threshold.  If daily rainfall (in millimeters) exceeds this amount,
+# the sprinkler will not run. Forecast is based on next 24 hours.
+rain_threshold_mm = 0.5
+forecast_threshold_mm = 0.5
+
+####
+## GPIO pins to control the sprinkler and the status LEDs
+gpio_starter = 17
+gpio_led1 = 27
+#gpio_led2 = 22  # Not used currently
+
+####
+## Choose location and name of log file
+log_file = /home/pi/rpi_sprinkler/sprinkler.log
